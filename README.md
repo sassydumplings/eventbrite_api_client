@@ -1,6 +1,8 @@
 # EventbriteApiClient
 
-TODO: Write a gem description
+A simple client for Eventbrite's v3 API. It's just a wrapper around
+`HTTParty` and returns `HTTParty::Response`'s. The mechanism is pretty
+generic and could easily be applied to any API.
 
 ## Installation
 
@@ -18,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+eb_api_client = EventbriteApiClient.new(auth_token: YOUR_TOKEN)
+response = eb_api_client.events.search.get(q: 'Free Beer')
+
+response = eb_api_client.users(1_000_000).owned_events.get()
+```
 
 ## Contributing
 

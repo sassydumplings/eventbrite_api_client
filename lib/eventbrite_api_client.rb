@@ -38,7 +38,7 @@ class EventbriteApiClient
       if !is_json?(response)
         {
           'error' => 'NOT_FOUND',
-          'error_description' => 'That is not a valid api endpoitn',
+          'error_description' => 'That is not a valid api endpoint',
           'status_code' => 404
         }
       else
